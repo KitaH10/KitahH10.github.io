@@ -1,0 +1,402 @@
+:root {
+    --primary-blue: #1e40af;
+    --secondary-blue: #3b82f6;
+    --light-blue: #eff6ff;
+    --dark-slate: #1e293b;
+    --text-muted: #64748b;
+    --white: #ffffff;
+    --error-red: #dc2626;
+    --success-green: #16a34a;
+    --radius-md: 8px;
+    --radius-lg: 12px;
+    --shadow-soft: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+
+    --bg-dark: #0f172a;
+    --card-dark: #1e293b;
+    --text-dark: #f8fafc;
+    --border-dark: #334155;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #f8fafc;
+    color: var(--dark-slate);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+header {
+    background-color: var(--white);
+    border-bottom: 4px solid var(--primary-blue);
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    box-shadow: var(--shadow-soft);
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.logo-container img {
+    height: 50px;
+    width: auto;
+}
+
+.logo-container h1 {
+    color: var(--primary-blue);
+    font-size: 1.5rem;
+    font-weight: 800;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--dark-slate);
+    font-weight: 600;
+    padding: 0.5rem 1rem;
+    border-radius: var(--radius-md);
+    transition: all 0.3s ease;
+}
+
+nav ul li a:hover, nav ul li a.active {
+    background-color: var(--light-blue);
+    color: var(--primary-blue);
+}
+
+main {
+    flex: 1;
+    max-width: 1200px;
+    width: 100%;
+    margin: 2rem auto;
+    padding: 0 1.5rem;
+}
+
+.hero-banner {
+    background: linear-gradient(135deg, #1e3a8a, #3b82f6);
+    color: var(--white);
+    padding: 4rem 2rem;
+    border-radius: var(--radius-lg);
+    text-align: center;
+    margin-bottom: 3rem;
+    box-shadow: var(--shadow-soft);
+}
+
+.hero-banner h2 {
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+}
+
+.hero-banner p {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    opacity: 0.9;
+}
+
+.btn-ccss {
+    display: inline-block;
+    background-color: var(--white);
+    color: var(--primary-blue);
+    padding: 0.8rem 2rem;
+    font-weight: 700;
+    text-decoration: none;
+    border-radius: var(--radius-md);
+    border: 2px solid transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: var(--shadow-soft);
+}
+
+.btn-ccss:hover {
+    background-color: var(--primary-blue);
+    color: var(--white);
+    border-color: var(--white);
+}
+
+.grid-citas {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 1.5rem;
+}
+
+.card {
+    background-color: var(--white);
+    border-radius: var(--radius-lg);
+    padding: 1.5rem;
+    box-shadow: var(--shadow-soft);
+    border-left: 5px solid var(--secondary-blue);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card h4 {
+    color: var(--primary-blue);
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.card p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    margin-bottom: 0.5rem;
+}
+
+.card .badge {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    background-color: var(--light-blue);
+    color: var(--primary-blue);
+    border-radius: 50px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    align-self: flex-start;
+    margin-bottom: 1rem;
+}
+
+.card button {
+    background-color: var(--primary-blue);
+    color: var(--white);
+    border: none;
+    padding: 0.6rem 1rem;
+    border-radius: var(--radius-md);
+    cursor: pointer;
+    font-weight: 600;
+    width: 100%;
+    margin-top: 1rem;
+}
+
+.card button:hover {
+    background-color: var(--secondary-blue);
+}
+
+.search-section {
+    background-color: var(--white);
+    padding: 1.5rem;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-soft);
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-bottom: 1.25rem;
+}
+
+.form-group label {
+    font-weight: 700;
+    color: var(--dark-slate);
+    font-size: 0.95rem;
+}
+
+.form-control {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 2px solid #e2e8f0;
+    border-radius: var(--radius-md);
+    outline: none;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.form-control:focus {
+    border-color: var(--secondary-blue);
+}
+
+.form-card-container {
+    background-color: var(--white);
+    padding: 2.5rem;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-soft);
+}
+
+.alert-error {
+    color: var(--error-red);
+    font-size: 0.85rem;
+    font-weight: 600;
+    min-height: 1.25rem;
+    display: block;
+}
+
+.form-control.invalid {
+    border-color: var(--error-red);
+    background-color: #fef2f2;
+}
+
+.form-control.valid {
+    border-color: var(--success-green);
+}
+
+.cita-registrada-card {
+    background-color: var(--white);
+    border-radius: var(--radius-md);
+    padding: 1.25rem;
+    box-shadow: var(--shadow-soft);
+    border-left: 5px solid var(--success-green);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+
+.btn-eliminar {
+    background-color: var(--error-red);
+    color: var(--white);
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: var(--radius-md);
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.btn-eliminar:hover {
+    background-color: #b91c1c;
+}
+
+.estado-vacio {
+    text-align: center;
+    color: var(--text-muted);
+    padding: 3rem;
+    background: var(--white);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-soft);
+    width: 100%;
+}
+
+footer {
+    background-color: var(--dark-slate);
+    color: var(--white);
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: auto;
+    font-size: 0.9rem;
+}
+
+.alert-success-banner {
+    background-color: #f0fdf4;
+    color: var(--success-green);
+    border: 2px solid var(--success-green);
+    padding: 1rem;
+    border-radius: var(--radius-md);
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+    text-align: center;
+}
+
+.btn-toggle-dark {
+    background: #e2e8f0;
+    border: none;
+    padding: 0.5rem 0.75rem;
+    border-radius: var(--radius-md);
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+body.dark-mode {
+    background-color: var(--bg-dark);
+    color: var(--text-dark);
+}
+
+body.dark-mode header,
+body.dark-mode .card,
+body.dark-mode .search-section,
+body.dark-mode .form-card-container,
+body.dark-mode .cita-registrada-card,
+body.dark-mode .estado-vacio,
+body.dark-mode main section div {
+    background-color: var(--card-dark) !important;
+    border-color: var(--border-dark) !important;
+    color: var(--text-dark) !important;
+}
+
+body.dark-mode p, 
+body.dark-mode span,
+body.dark-mode strong {
+    color: #cbd5e1 !important;
+}
+
+body.dark-mode .card h4 {
+    color: #f1f5f9 !important;
+}
+
+body.dark-mode .card .badge {
+    background-color: var(--border-dark) !important;
+    color: #60a5fa !important;
+}
+
+body.dark-mode nav ul li a.active {
+    background-color: var(--primary-blue) !important;
+    color: var(--white) !important;
+}
+
+body.dark-mode h3,
+body.dark-mode h2,
+body.dark-mode h4,
+body.dark-mode label {
+    color: var(--text-dark) !important;
+}
+
+body.dark-mode .form-control {
+    background-color: var(--bg-dark);
+    border-color: var(--border-dark);
+    color: var(--text-dark);
+}
+
+body.dark-mode nav ul li a {
+    color: var(--text-dark);
+}
+
+body.dark-mode nav ul li a:hover {
+    background-color: var(--border-dark);
+    color: var(--secondary-blue);
+}
+
+body.dark-mode .btn-toggle-dark {
+    background: var(--border-dark);
+    color: var(--text-dark);
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.75rem;
+    }
+    .search-section {
+        flex-direction: column;
+        gap: 1rem;
+    }
+}
