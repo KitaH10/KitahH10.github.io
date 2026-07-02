@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const filtroCentro = document.getElementById('filtro-centro');//referencia al select de filtrado por tipo de centro
 
     // se descarga el JSON y se guarda en la variable global centrosMedicos
-    fetch('../json/centros.json')
+    fetch('json/centros.json')
         .then(respuesta => respuesta.json())
         .then(datos => {
             centrosMedicos = datos;
