@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const inputCedula = document.getElementById('cedula-login');
     const errorLogin = document.getElementById('error-login');
     //se encarga de precargar el JSON de asegurados desde un archivo externo y almacenarlo en la variable global Asegurados para su uso posterior en la validación del login
-    fetch('../json/usuarios.json')
+    fetch('json/usuarios.json')
         .then(respuesta => respuesta.json())
         .then(datos => {
             Asegurados = datos;
