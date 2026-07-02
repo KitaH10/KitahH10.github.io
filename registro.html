@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CCSS | Registrar Nueva Cita</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <script src="../js/auth.js"></script>
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <h1>Citas Virtuales CCSS</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="citas.html">Buscar Citas</a></li>
+                <li><a href="registro.html" class="active">Registrar Cita</a></li>
+                <li><a href="historial.html">Historial de Citas</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div id="resumen-cita-seleccionada" style="display: none; padding: 1rem; border-radius: var(--radius-md); margin-bottom: 2rem; font-weight: 700;"></div>
+        <div style="max-width: 600px; margin: 0 auto;">
+            <section class="form-card-container">
+                <h3 style="color: var(--primary-blue); margin-bottom: 1.5rem; text-align: center;">Formulario de Registro de Cita</h3>
+                <form id="formulario-registro">
+                    <div class="form-group">
+                        <label for="nombre-completo">Nombre Completo del Paciente</label>
+                        <input type="text" id="nombre-completo" class="form-control" placeholder="Ingrese nombre y apellidos">
+                        <span id="error-nombre" class="alert-error"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="cedula-usuario">Número de Cédula (9 dígitos)</label>
+                        <input type="text" id="cedula-usuario" class="form-control" placeholder="Ej: 115480236">
+                        <span id="error-cedula" class="alert-error"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="motivo-consulta">Síntomas / Motivo de Consulta</label>
+                        <textarea id="motivo-consulta" class="form-control" rows="4" placeholder="Describa brevemente sus padecimientos médicos actuales"></textarea>
+                        <span id="error-motivo" class="alert-error"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="fecha-cita">Fecha de la Cita</label>
+                        <input type="date" id="fecha-cita" class="form-control">
+                        <span id="error-fecha" class="alert-error"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="horario-cita">Horarios Disponibles para este Centro médico</label>
+                        <select id="horario-cita" class="form-control">
+                            <option value="">Seleccione primero un centro médico</option>
+                        </select>
+                        <span id="error-horario" class="alert-error"></span>
+                    </div>
+                    <button type="submit" class="btn-ccss" style="background-color: var(--primary-blue); color: white; width: 100%; border: none; margin-top: 1rem;">Confirmar y Agendar Cita</button>
+                </form>
+            </section>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2026 Caja Costarricense de Seguro Social. </p>
+    </footer>
+    <script src="../js/registro.js"></script>
+</body>
+</html>
